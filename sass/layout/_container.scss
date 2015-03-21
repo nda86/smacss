@@ -1,0 +1,35 @@
+body{
+	@include container(800px);
+}
+
+#header{
+	@include span(12);
+	background: #F7FF20;
+	height: 300px;
+}
+
+#content{
+	@include span(8);
+	background: #ccc;
+	height: 500px;
+		@media (max-width: 768px){
+			@include span(12);
+		}
+}
+
+#aside{
+	@include span(4 last);
+	background: #1FAF0F;
+	height: 700px;
+		@media (max-width: 768px){
+			@include span(8);
+			margin-left: span(2);
+			height: 300px;
+		}
+}
+
+#footer{
+	@include span(12 last);
+	background: #241010;
+	height: 350px;
+}
